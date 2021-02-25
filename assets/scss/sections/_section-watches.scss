@@ -1,0 +1,94 @@
+.section-watches {
+  height: 140vh;
+  padding: 20vh 0;
+  flex-direction: column;
+  position: relative;
+
+  &__watch {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__control {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(221, 221, 221, 0.4);
+    border-radius: 80px;
+
+    & i {
+      font-size: 3rem;
+      color: $color-primary;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 30vh;
+    right: 35%;
+    width: 200px;
+    height: 80px;
+    background-color: $color-black;
+    color: $color-primary;
+    border: 1px dashed $color-white;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 200;
+    cursor: pointer;
+  }
+}
+
+.section-watches__watch > div {
+  position: absolute;
+}
+
+.watch-bands {
+  transition: margin-right 1s;
+  &__img {
+    width: 530px;
+    height: 530px;
+    object-fit: contain;
+  }
+}
+
+.watch-case {
+  flex-direction: column;
+  transition: margin-top 1s;
+
+  &__img {
+    width: 530px;
+    height: 530px;
+    object-fit: contain;
+  }
+}
+
+.watch-top-control {
+  top: 22vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.watch-right-control {
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+.watch-bottom-control {
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.watch-left-control {
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.hideControl {
+  opacity: 0;
+  visibility: hidden;
+}

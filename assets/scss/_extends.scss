@@ -1,0 +1,15 @@
+%container {
+  max-width: $ul;
+  margin: auto;
+  padding-right: $gap;
+  padding-left: $gap;
+}
+%btn {
+  display: block;
+
+  height: 60px;
+  padding: 18px $gap;
+
+  transition: background-color 0.5s;
+  text-align: center;
+}
