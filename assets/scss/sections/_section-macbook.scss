@@ -3,14 +3,42 @@
   height: 100%;
   background-color: $color-black;
   flex-direction: column;
-  padding: 240px 0;
+  padding: 150px 0;
   clip-path: polygon(61% 0%, 100% 0%, 100% 97%, 46% 100%, 1% 100%, 0% 3%);
 
   &__heading {
-    font-size: 10rem;
     font-weight: 200;
     color: $color-primary;
-    margin-bottom: 240px;
+
+    @include xxl-min {
+      font-size: 9rem;
+      margin-bottom: 150px;
+    }
+
+    @include xxl-ul {
+      font-size: 9rem;
+      margin-bottom: 130px;
+    }
+
+    @include ul-lg {
+      font-size: 8rem;
+      margin-bottom: 130px;
+    }
+
+    @include lg-md {
+      font-size: 6rem;
+      margin-bottom: 120px;
+    }
+
+    @include md-xs {
+      font-size: 4rem;
+      margin-bottom: 100px;
+    }
+
+    @include xs {
+      font-size: 3rem;
+      margin-bottom: 100px;
+    }
   }
 
   &__content {
@@ -59,10 +87,40 @@
   flex-direction: column;
 
   & i {
-    font-size: 10rem;
     color: $color-white;
-    margin-bottom: 32px;
+
+    @include xxl-min {
+      font-size: 10rem;
+      margin-bottom: 20px;
+    }
+
+    @include xxl-xl {
+      font-size: 6rem;
+      margin-bottom: 20px;
+    }
+
+    @include xl-lg {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+
+    @include lg-md {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+    }
+
+    @include md-xs {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    @include xs {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
   }
+
+
 }
 
 .change .loading {
@@ -71,11 +129,39 @@
 }
 
 .progress-bar {
-  width: 350px;
-  height: 5px;
   background-color: #888;
   border-radius: 80px;
   position: relative;
+
+  @include xxl-min {
+    width: 300px;
+    height: 5px;
+  }
+
+  @include xxl-xl {
+    width: 250px;
+    height: 5px;
+  }
+
+  @include xl-lg {
+    width: 220px;
+    height: 4px;
+  }
+
+  @include lg-md {
+    width: 180px;
+    height: 4px;
+  }
+
+  @include md-xs {
+    width: 150px;
+    height: 4px;
+  }
+
+  @include xs {
+    width: 70px;
+    height: 2px;
+  }
 
   &::after {
     content: "";
@@ -95,34 +181,124 @@
 
 .macbook-info {
   position: absolute;
-  width: 1120px;
+  max-width: 1120px;
   text-align: center;
   opacity: 0;
 
   &__heading {
-    font-size: 6rem;
     color: $color-primary;
     font-weight: 400;
+
+    @include xxl-min {
+      font-size: 5rem;
+    }
+
+    @include xxl-xl {
+      font-size: 3rem;
+    }
+
+    @include xl-lg {
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      font-size: 2rem;
+    }
+
+    @include md-xs {
+      font-size: 1.3rem;
+    }
+
+    @include xs {
+      font-size: 1rem;
+    }
   }
 
   &__price {
-    font-size: 2.5rem;
     font-weight: 200;
-    margin: 48px 0;
+
+    @include xxl-min {
+      font-size: 2.5rem;
+      margin: 30px 0;
+    }
+
+    @include xxl-xl {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    @include xl-lg {
+      font-size: 1.7rem;
+      margin: 20px 0;
+    }
+
+    @include lg-md {
+      font-size: 1.4rem;
+      margin: 20px 0;
+    }
+
+    @include md-xs {
+      font-size: 1rem;
+      margin: 15px 0;
+    }
+
+    @include xs {
+      font-size: 0.7rem;
+      margin: 5px 0;
+    }
   }
 
   &__btn {
-    width: 400px;
-    height: 80px;
     background-image: linear-gradient(#ddd, #fff);
     border: none;
-    border-radius: 8px;
-    box-shadow: 1.6px 1.6px 1.6px #fff, -1.6px -1.6px 1.6px #fff;
-    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff;
     font-weight: 500;
-    letter-spacing: 3.2px;
+    
     color: $color-primary;
     cursor: pointer;
+
+    @include xxl-min {
+      width: 250px;
+      height: 50px;
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+    }
+
+    @include xxl-xl {
+      width: 200px;
+      height: 40px;
+      font-size: 0.9rem;
+      letter-spacing: 0.2rem;
+    }
+
+    @include xl-lg {
+      width: 180px;
+      height: 35px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @include lg-md {
+      width: 150px;
+      height: 30px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @include md-xs {
+      width: 100px;
+      height: 30px;
+      font-size: 0.6rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @include xs {
+      width: 50px;
+      height: 15px;
+      font-size: 0.5rem;
+      letter-spacing: 0;
+    }
   }
 }
 

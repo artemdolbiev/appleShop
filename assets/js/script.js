@@ -125,25 +125,25 @@ let axisY = 0;
 let axisX = 0;
 
 const hideControl = () => {
-  if (axisY === -4240) {
+  if (axisY === -2800) {
     watchTopControl.classList.add('hideControl');
   } else {
     watchTopControl.classList.remove('hideControl')
   }
 
-  if (axisY === 4240) {
+  if (axisY === 2800) {
     watchBottomControl.classList.add('hideControl');
   } else {
     watchBottomControl.classList.remove('hideControl')
   }
 
-  if (axisX === 4240) {
+  if (axisX === 2800) {
     watchRightControl.classList.add('hideControl');
   } else {
     watchRightControl.classList.remove('hideControl')
   }
 
-  if (axisX === -4240) {
+  if (axisX === -2800) {
     watchLeftControl.classList.add('hideControl');
   } else {
     watchLeftControl.classList.remove('hideControl')
@@ -151,22 +151,22 @@ const hideControl = () => {
 }
 
 watchTopControl.addEventListener('click', () => {
-  watchCase.style.marginTop = `${axisY -= 1060}px`;
+  watchCase.style.marginTop = `${axisY -= 700}px`;
   hideControl();
 })
 
 watchBottomControl.addEventListener('click', () => {
-  watchCase.style.marginTop = `${axisY += 1060}px`;
+  watchCase.style.marginTop = `${axisY += 700}px`;
   hideControl();
 })
 
 watchRightControl.addEventListener('click', () => {
-  watchBands.style.marginRight = `${axisX += 1060}px`;
+  watchBands.style.marginRight = `${axisX += 700}px`;
   hideControl();
 })
 
 watchLeftControl.addEventListener('click', () => {
-  watchBands.style.marginRight = `${axisX -= 1060}px`;
+  watchBands.style.marginRight = `${axisX -= 700}px`;
   hideControl();
 })
 

@@ -9,21 +9,64 @@
     position: relative;
 
     & img {
-      width: 50%;
-      height: 100%;
       object-fit: contain;
+
+      @include md-min {
+        width: 50%;
+        height: 100%;
+      }
+
+      @include md {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   &__title {
     position: absolute;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 15rem;
     font-weight: 300;
     color: $color-white;
-    text-shadow: 1.6px 1.6px 0 #999;
+    text-shadow: 1px 1px 0 #999;
+
+    @include xxl-min {
+      font-size: 15rem;
+      top: -100px;
+    }
+
+    @include xxl-xl {
+      font-size: 12rem;
+      top: -40px;
+    }
+
+    @include xl-lg {
+      font-size: 10rem;
+      top: -30px;
+    }
+
+    @include lg-md {
+      font-size: 8rem;
+      top: -10px;
+    }
+
+    @include md-xs {
+      font-size: 5.7rem;
+      top: -10px;
+    }
+
+    @include xs {
+      font-size: 4rem;
+      top: 0;
+    }
+  }
+
+
+  &__img1 {
+    @include md {
+      display: none;
+    }
   }
 
   &__img2 {
@@ -40,15 +83,65 @@
 }
 
 .airpods-btn {
-  width: 220px;
-  height: 60px;
   background-color: $color-primary;
   border: none;
-  margin: 0 30px;
-  font-size: 1.2rem;
-  border-radius: 8px;
   color: $color-white;
   cursor: pointer;
+
+  @include xxl-min {
+    width: 220px;
+    height: 60px;
+    font-size: 1.2rem;
+    margin: 0 30px;
+    border-radius: 8px;
+  }
+
+  @include xxl-xl {
+    width: 180px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin: 0 30px;
+    border-radius: 8px;
+  }
+
+  @include xl-lg {
+    width: 160px;
+    height: 40px;
+    font-size: 1rem;
+    margin: 0 30px;
+    border-radius: 7px;
+  }
+
+  @include lg-md {
+    width: 140px;
+    height: 30px;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    border-radius: 6px;
+  }
+
+  @include md-xs {
+    width: 90px;
+    height: 20px;
+    font-size: 0.7rem;
+    margin: 0 0;
+    border-radius: 5px;
+    &:first-child {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  @include xs {
+    width: 60px;
+    height: 20px;
+    font-size: 0.5rem;
+    margin-bottom: 50px;
+    &:first-child {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
 
   &:last-child {
     background-color: $color-white;

@@ -1,5 +1,5 @@
 .section-watches {
-  height: 140vh;
+  height: 155vh;
   padding: 20vh 0;
   flex-direction: column;
   position: relative;
@@ -13,30 +13,57 @@
 
   &__control {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background-color: rgba(221, 221, 221, 0.4);
-    border-radius: 80px;
+    border-radius: 40px;
 
     & i {
-      font-size: 3rem;
+      font-size: 1.5rem;
       color: $color-primary;
     }
   }
 
   &__btn {
     position: absolute;
-    bottom: 30vh;
-    right: 35%;
-    width: 200px;
-    height: 80px;
     background-color: $color-black;
     color: $color-primary;
     border: 1px dashed $color-white;
-    border-radius: 50px;
-    font-size: 1.6rem;
+    border-radius: 40px;
     font-weight: 200;
     cursor: pointer;
+
+    @include lg-min {
+      font-size: 1rem;
+      right: 25%;
+      bottom: 30vh;
+      width: 130px;
+      height: 50px;
+    }
+
+    @include lg-md {
+      font-size: 0.9rem;
+      right: 20%;
+      bottom: 30vh;
+      width: 100px;
+      height: 40px;
+    }
+
+    @include md-xs {
+      font-size: 0.8rem;
+      right: 15%;
+      bottom: 30vh;
+      width: 80px;
+      height: 30px;
+    }
+
+    @include xs {
+      font-size: 0.8rem;
+      right: 20%;
+      bottom: 50vh;
+      width: 80px;
+      height: 40px;
+    }
   }
 }
 
@@ -47,20 +74,29 @@
 .watch-bands {
   transition: margin-right 1s;
   &__img {
-    width: 530px;
-    height: 530px;
+    width: 350px;
+    height: 350px;
     object-fit: contain;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 
 .watch-case {
   flex-direction: column;
   transition: margin-top 1s;
-
   &__img {
-    width: 530px;
-    height: 530px;
+    width: 350px;
+    height: 350px;
     object-fit: contain;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 

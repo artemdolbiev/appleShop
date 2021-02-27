@@ -10,38 +10,152 @@
 
   &__banner {
     flex-direction: column;
+    @include md {
+      position: absolute;
+      top: 0;
+      bottom: -20px;
+    }
   }
 
   &__title {
-    font-size: 208px;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 8px;
+
+    @include ul-min {
+      font-size: 130px;
+      letter-spacing: 8px;
+    }
+
+    @include ul-xl {
+      font-size: 90px;
+      letter-spacing: 6px;
+    }
+
+    @include xl-lg {
+      font-size: 80px;
+      letter-spacing: 6px;
+    }
+    @include lg-md {
+      font-size: 68px;
+      letter-spacing: 5px;
+    }
+
+    @include md-xs {
+      font-size: 68px;
+      position: relative;
+      left: -15px;
+
+
+      &::first-letter {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    @include xs {
+      font-size: 50px;
+      position: relative;
+      left: -15px;
+
+      &::first-letter {
+        visibility: hidden;
+        opacity: 0;
+        
+      }
+    }
   }
 
   &__text {
-    font-size: 64px;
     font-weight: 400;
-    letter-spacing: 1.6px;
-    margin: 96px 0 64px 0;
+
+    @include ul-min {
+      font-size: 40px;
+      letter-spacing: 1px;
+      margin: 64px 0 40px 0;
+    }
+
+    @include ul-xl {
+      font-size: 35px;
+      letter-spacing: 1px;
+      margin: 54px 0 30px 0;
+    }
+
+    @include xl-lg {
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin: 44px 0 30px 0;
+    }
+    @include lg-xs {
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin: 44px 0 30px 0;
+    }
+
+    @include xs {
+      font-size: 17px;
+      margin: 40px 0 20px 0;
+    }
   }
 
   &__name {
-    font-size: 48px;
-    margin-bottom: 48px;
+
+    @include ul-min {
+      font-size: 30px;
+      margin-bottom: 48px;
+    }
+
+    @include ul-lg {
+      font-size: 25px;
+      margin-bottom: 38px;
+    }
+    @include lg-md {
+      font-size: 22px;
+      margin-bottom: 38px;
+    }
+
+    @include md-sm {
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    @include sm {
+      font-size: 16px;
+      margin-bottom: 33px;
+    }
   }
 
   &__btn {
-    padding: 32px 64px;
-    font-size: 32px;
     background-color: $color-black;
     color: $color-primary;
-    letter-spacing: 1.6px;
+    letter-spacing: 1px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     clip-path: polygon(50% 0%, 81% 5%, 100% 0, 100% 100%, 80% 95%, 50% 100%, 20% 95%, 0 100%, 0 0, 23% 5%);
     transition: clip-path 0.5s;
+
+    @include ul-min {
+      padding: 20px 40px;
+      font-size: 20px;
+    }
+
+    @include ul-lg {
+      padding: 18px 35px;
+      font-size: 17px;
+    }
+    @include lg-md {
+      padding: 18px 35px;
+      font-size: 15px;
+    }
+    @include md-xs {
+      padding: 15px 33px;
+      font-size: 15px;
+    }
+
+    @include xs {
+      padding: 12px 30px;
+      font-size: 15px;
+    }
 
     &:hover {
       clip-path: polygon(40% 15%, 77% 15%, 100% 10%, 100% 90%, 75% 85%, 40% 85%, 30% 100%, 0 50%, 0 50%, 30% 0);
@@ -75,27 +189,124 @@
 
 .logo {
   position: absolute;
-  top: 48px;
-  left: 48px;
+  
+  @include xxl-min {
+    top: 30px;
+    left: 30px;
+  }
+
+  @include xxl-ul {
+    top: 20px;
+    left: 30px;
+  }
+
+  @include ul-md {
+    top: 0;
+    left: 30px;
+  }
+
+  @include md-xs {
+    top: 0;
+    left: 10px;
+  }
+
+  @include xs {
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   & i {
-    font-size: 160px;
+    
     color: rgba(0, 0, 0, 0.8);
+
+    @include xxl-min {
+      font-size: 100px;
+    }
+    @include xxl-ul {
+      font-size: 90px;
+    }
+  
+    @include ul-lg {
+      font-size: 80px;
+    }
+
+    @include lg-md {
+      font-size: 70px;
+    }
+
+    @include md-xs {
+      font-size: 60px;
+    }
+
+    @include xs {
+      font-size: 50px;
+    }
   }
 }
 
 
 .navbar {
   position: absolute;
-  top: 48px;
-  right: 10%;
+
+  @include lg-min {
+    right: 10%;
+    top: 30px;
+  }
+
+  @include lg-md {
+    right: 2%;
+    top: 20px;
+  }
+
+  @include md-xs {
+    right: 2%;
+    top: 20px;
+  }
+  @include xs {
+    right: 2%;
+    top: 15px;
+  }
 
   &-link {
-    font-size: 32px;
     display: inline-block;
-    margin: 0 48px;
     color: $color-black;
     transition: transform 0.5s;
+
+    @include xl-min {
+      font-size: 20px;
+      margin: 0 39px;
+    }
+
+    @include xl-lg {
+      font-weight: 700;
+      font-size: 17px;
+      margin: 0 35px;
+    }
+
+    @include lg-md {
+      font-weight: 700;
+      font-size: 15px;
+      margin: 0 30px;
+    }
+
+    @include md-sm {
+      font-weight: 700;
+      font-size: 13px;
+      margin: 0 25px;
+    }
+
+    @include sm-xs {
+      font-weight: 700;
+      font-size: 13px;
+      margin: 0 18px;
+    }
+
+    @include xs {
+      font-weight: 700;
+      font-size: 11px;
+      margin: 0 12px;
+    }
 
     &:hover {
       transform: scale(1.5);
@@ -110,38 +321,74 @@
 }
 
 .cube-wrapper {
-  perspective: 1600px;
+  perspective: 1000px;
+  @include md-sm {
+    opacity: 0.7;
+  }
+
+  @include sm-xs {
+    opacity: 0.7;
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+  }
+
+  @include xs {
+    opacity: 0.7;
+    position: absolute;
+    top: 140px;
+    bottom: 0;
+  }
 }
 
 .cube {
-  width: 480px;
-  height: 880px;
+  
   background-color: $color-white;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg);
   position: relative;
   top: -32px;
   transition: transform 0.5s;
+
+  @include ul-min {
+    width: 300px;
+    height: 550px;
+  }
+
+  @include ul-lg {
+    width: 280px;
+    height: 550px;
+  }
+
+  @include lg-xs {
+    width: 230px;
+    height: 480px;
+  }
+
+  @include xs {
+    width: 190px;
+    height: 440px;
+  }
 }
 
 .front-side {
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 25px;
   background-color: #fee;
-  transform: translateZ(80px);
+  transform: translateZ(50px);
   position: absolute;
   transform-style: preserve-3d;
-  box-shadow: inset 1.6px 1.6px 1.6px #ddd, inset -1.6px -1.6px 1.6px #ddd;
+  box-shadow: inset 1px 1px 1px #ddd, inset -1px -1px 1px #ddd;
 
   &::before,
   &::after {
     content: "";
     width: 100%;
-    height: 160px;
+    height: 130px;
     background-color: #fee;
     position: absolute;
-    box-shadow: inset 1.6px 1.6px 1.6px #ddd, inset -1.6px -1.6px 1.6px #ddd;
+    box-shadow: inset 1px 1px 1px #ddd, inset -1px -1px 1px #ddd;
   }
 
   &::before {
@@ -172,12 +419,12 @@
   transform: translateZ(-80px);
   position: absolute;
   transform-style: preserve-3d;
-  box-shadow: inset 1.6px 1.6px 1.6px #ddd, inset -1.6px -1.6px 1.6px #ddd;
+  box-shadow: inset 1px 1px 1px #ddd, inset -1px -1px 1px #ddd;
 
   &::before,
   &::after {
     content: "iPhone";
-    width: 160px;
+    width: 130px;
     height: 100%;
     background-color: #fee;
     position: absolute;
@@ -205,23 +452,38 @@
   }
 
   & i {
-    font-size: 192px;
     color: $color-primary;
     text-shadow: (1.6px 1.6px 3.2px #aaa, -1.6px -1.6px 3.2px #aaa);
     transform: rotateY(180deg);
+
+    @include ul-min {
+      font-size: 10rem;
+    }
+
+    @include ul-md {
+      font-size: 8rem;
+    }
+
+    @include md {
+      font-size: 7rem;
+    }
   }
 }
 
 .controls {
   position: absolute;
-  bottom: -240px;
+  bottom: -150px;
   left: 50%;
   transform: translateX(-50%);
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 50%;
-  border: 16px solid rgba(0, 0, 0, 0.8);
+  border: 10px solid rgba(0, 0, 0, 0.8);
+
+  @include md {
+    display: none;
+  }
 
   &__link {
     position: absolute;
@@ -271,10 +533,17 @@
   }
 
   & i {
-    font-size: 24px;
+    
     color: $color-primary;
     opacity: 0.5;
     transition: opacity 0.5s;
+
+    @include ul-min {
+      font-size: 15px;
+    }
+  
+    @include ul{
+      font-size: 12px;
+    }
   }
 }
-

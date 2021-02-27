@@ -7,18 +7,76 @@
 
 
     &__link {
-      margin: 0 80px;
+
+      @include xxl-min {
+        margin: 0 60px;
+      }
+      @include xxl-xl {
+        margin: 0 40px;
+      }
+      @include xl-lg {
+        margin: 0 30px;
+      }
+      @include lg-md {
+        margin: 0 25px;
+      }
+      @include md-xs {
+        margin: 0 15px;
+      }
+      @include xs {
+        margin: 0 5px;
+      }
 
       & img {
-        width: 160px;
+        
+        @include xxl-min {
+          width: 160px;
+          margin-bottom: 40px;
+        }
+        @include xxl-xl {
+          width: 140px;
+          margin-bottom: 40px;
+        }
+        @include xl-lg {
+          width: 120px;
+          margin-bottom: 40px;
+        }
+        @include lg-md {
+          width: 90px;
+        }
+        @include md-xs {
+          width: 55px;
+        }
+        @include xs {
+          width: 40px;
+        }
       }
     }
   }
 
   &-copyright {
     position: absolute;
-    bottom: 80px;
-    font-size: 1.5rem;
     letter-spacing: 0.1rem;
+
+    @include xxl-min {
+      font-size: 1.5rem;
+      bottom: 60px;
+    }
+
+    @include xxl-lg {
+      font-size: 1rem;
+      bottom: 80px;
+    }
+
+    @include lg-xs {
+      font-size: 1rem;
+      bottom: 80px;
+    }
+
+    @include xs {
+      font-size: 1rem;
+      bottom: 80px;
+    }
   }
+
 }
